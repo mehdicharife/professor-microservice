@@ -1,0 +1,9 @@
+type Query {
+    professorById(id: ID) : Professor
+}
+
+type Professor {
+    id: ID,
+    firstName: String,
+    lastName: String
+}
