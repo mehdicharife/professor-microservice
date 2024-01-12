@@ -1,5 +1,7 @@
 package io.github.mehdicharife.professormicroservice.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
@@ -16,6 +18,12 @@ public class ProfessorController {
 
     @QueryMapping
     public Professor professorById(@Argument Long id) {
-        return this.professorService.getProfessorById(id).get();
+        return new Professor((long) 3, "John Smith");
+        //return this.professorService.getProfessorById(id).get();
+    }
+
+    @QueryMapping
+    public List<Professor> allProfessors() {
+        return this.professorService.getAllProfessors();
     }
 }

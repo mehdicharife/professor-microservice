@@ -1,9 +1,9 @@
 type Query {
     professorById(id: ID) : Professor
+    allProfessors: [Professor]
 }
 
 type Professor {
     id: ID,
-    firstName: String,
-    lastName: String
+    fullName: String
 }
