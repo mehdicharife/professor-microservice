@@ -23,10 +23,10 @@ public class ProfessorServiceImpl implements ProfessorService {
 
     @PostConstruct
     public void init() {
-        for (int i = 1; i <= 5; i++) {
-            String fullName = "Professor " + i;
-            professors.add(new Professor((long) i, fullName));
-        }
+        professors.add(new Professor((long) 5, "John Smith"));
+        professors.add(new Professor((long) 2, "John Smith"));
+        professors.add(new Professor((long) 8, "John Smith"));
+        professors.add(new Professor((long) 3, "John Smith"));
     }
 
     public Optional<Professor> getProfessorById(Long id) {
